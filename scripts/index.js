@@ -50,7 +50,7 @@ class Ball {
         if (distance < this.size + otherBall.size) {
             // Al cruzarse estaba declarado que las dos bolas se les asignaba el mismo color, de esta manera al cruzarse cada bola recibe un color aleatorio.
   
-             this.color = randomRGB();      
+            this.color = randomRGB();      
             otherBall.color = randomRGB();
         }
     }
@@ -72,7 +72,7 @@ while (balls.length < 10) {
 }
 
 function loop() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)'; // Cambiado el fondo a negro
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
