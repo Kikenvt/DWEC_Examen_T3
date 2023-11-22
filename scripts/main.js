@@ -1,3 +1,10 @@
+/**
+ * **Autor:** Enrique Fernandez - Campoamor Fernandez
+ * **GitHub:** https://github.com/Kikenvt/DWEC_Examen_T3.git
+ */
+
+
+
 import { ctx, width, height } from "./canvas-setup.js";
 import { balls } from "./constructorBall.js";
 
