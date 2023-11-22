@@ -1,7 +1,7 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const width = canvas.width = window.innerWidth;
+const width = canvas.width = window.innerWidth; //Aquí estaba tomando el valor de la altura de window cuando debería ser el ancho
 const height = canvas.height = window.innerHeight;
 
 function random(min, max) {
@@ -13,12 +13,12 @@ function randomRGB() {
 }
 
 class Ball {
-    constructor(x, y, velX, velY, color, size) {
+    constructor(x, y, velX, velY, size) {
         this.x = x;
         this.y = y;
         this.velX = velX;
         this.velY = velY;
-        this.color = color;
+        this.color = randomRGB();
         this.size = size;
     }
 
@@ -69,7 +69,7 @@ while (balls.length < 4) {
 }
 
 function loop() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+    ctx.fillStyle = 'rgba(0, 245, 0, 0.25)';
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
