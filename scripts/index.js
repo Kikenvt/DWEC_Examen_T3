@@ -1,16 +1,4 @@
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
-
-const width = canvas.width = window.innerWidth; //Aquí estaba tomando el valor de la altura de window cuando debería ser el ancho
-const height = canvas.height = window.innerHeight;
-
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function randomRGB() {
-    return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
-}
+import { randomRGB, ctx, width, height, random } from "./canvas-setup.js";
 
 class Ball {
     constructor(x, y, velX, velY, size) {
